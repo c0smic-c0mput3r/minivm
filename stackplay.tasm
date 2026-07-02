@@ -1,0 +1,15 @@
+; a=12 b=35, compute a^2 + b^2
+; push a once, dup it, multiply to get a^2
+PUSH 12
+DUP
+MUL
+
+; push b once, dup it, multiply to get b^2
+PUSH 35
+DUP
+MUL
+
+; add a^2 + b^2
+ADD
+PRINT
+HALT

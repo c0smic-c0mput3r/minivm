@@ -1,0 +1,21 @@
+; horner's method for 3x^3 + 2x^2 + 5x + 7 at x=11
+; store x=11 in slot 0
+PUSH 11
+STORE 0
+
+; horner's method: ((3x + 2)x + 5)x + 7
+PUSH 3
+LOAD 0
+MUL
+PUSH 2
+ADD
+LOAD 0
+MUL
+PUSH 5
+ADD
+LOAD 0
+MUL
+PUSH 7
+ADD
+PRINT
+HALT
