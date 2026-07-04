@@ -86,11 +86,7 @@ fn main() {
 
         
             let mut machine = vm::Vm::new();
-            let result = if trace {
-                machine.run_trace(code)
-            } else {
-                machine.run(code)
-            };
+            let result = machine.run(code, trace);
 
             if let Err(e) = result {
                 eprintln!("{}", e);
